@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'engineersmy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('EMY_SERVICE_DB_NAME', 'emy'),
+        'HOST': os.environ.get('EMY_SERVICE_DB_HOST', 'localhost'),
+        'PORT': os.environ.get('EMY_SERVICE_DB_PORT', '5432'),
+        'USER': os.environ.get('EMY_SERVICE_DB_USER', 'emy'),
+        'PASSWORD': os.environ.get('EMY_SERVICE_DB_PASSWORD', 'emy'),
     }
 }
 

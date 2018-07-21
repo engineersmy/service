@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EMY Events {% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/uikit.min.css" %}">
+    <script src="{% static "js/uikit.min.js" %}"></script>
+    <script src="{% static "js/uikit-icons.min.js" %}"></script>
+</head>
+
+<body>
+    <h2 class="uk-margin-top uk-margin-auto-left uk-margin-auto-right uk-width-large uk-heading-divider uk-text-center">{% block heading %}{% endblock %}</h2>
+    {% block body %}{% endblock %}
+</body>
+
+</html>
