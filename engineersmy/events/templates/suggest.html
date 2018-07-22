@@ -1,0 +1,21 @@
+{% extends 'generic.html' %}
+
+{% block title %}- Suggest{% endblock %}
+{% block heading %}Suggest an Event{% endblock %}
+
+{% block body %}
+
+<div class="uk-flex uk-width-xxlarge uk-margin-auto-left uk-margin-auto-right uk-flex-column uk-flex-center uk-margin-remove-top">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+            {{field.label_tag}}
+            <br>
+            {{field}}
+            <br>
+        {% endfor %}
+        <button type="submit" class="uk-button uk-button-primary uk-width-1-1">Submit Event</button>
+    </form>
+</div>
+
+{% endblock %}
