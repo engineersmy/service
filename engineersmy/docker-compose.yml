@@ -6,3 +6,6 @@ db:
         POSTGRES_DB: emy
         POSTGRES_USER: emy
         POSTGRES_PASSWORD: emy
+        PG_DATA: /data
+    volumes:
+        - ./data:/data
